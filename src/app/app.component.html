@@ -1,0 +1,22 @@
+<div class="container mt-5">
+  <h3>Export Data in excel sheet</h3>
+  <table id="stu" class="table table-collapse table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Roll</th>
+        <th>Total Marks</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let s of student">
+        <td>{{s.name}}</td>
+        <td>{{s.email}}</td>
+        <td>{{s.roll}}</td>
+        <td>{{s.totalmarks}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <button (click)="excelExport()" class="btn btn-primary">Export Data</button>
+</div>
